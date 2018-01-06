@@ -46,5 +46,10 @@ namespace QuickSortWPFApp
             NumbersToSortListView.ItemsSource = numberManager.NumbersToSort;
             SortedResultListView.ItemsSource = numberManager.SortedResult;
         }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            numberManager.SortNumbers(numberManager.NumbersToSort);
+        }
     }
 }

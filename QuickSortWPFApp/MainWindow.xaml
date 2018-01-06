@@ -129,10 +129,11 @@
                     Text="Generate Numbers" />
             </Button>
             <Button
-                x:Name="startButton"
+                x:Name="StartButton"
                 Width="150"
                 Margin="10"
-                HorizontalAlignment="Center">
+                HorizontalAlignment="Center"
+                Click="StartButton_Click">
                 <TextBlock FontSize="20" Text="Start" />
             </Button>
         </StackPanel>
