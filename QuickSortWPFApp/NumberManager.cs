@@ -41,6 +41,7 @@ namespace QuickSortWPFApp
 
         public void SortNumbers(ObservableCollection<int> collectionToSort)
         {
+            sortedResult.Clear();
             int[] arrayToSort = new int[collectionToSort.Count];
             collectionToSort.CopyTo(arrayToSort, 0);
             QuickSort(arrayToSort);

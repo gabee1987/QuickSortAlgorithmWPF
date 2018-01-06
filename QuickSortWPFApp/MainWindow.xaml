@@ -39,7 +39,8 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="40" />
-                <RowDefinition Height="340" />
+                <RowDefinition Height="250" />
+                <RowDefinition Height="50" />
             </Grid.RowDefinitions>
 
             <TextBlock
@@ -49,22 +50,6 @@
                 HorizontalAlignment="Center"
                 FontSize="18"
                 Text="Sortable list" />
-            <!--<ScrollViewer
-                Grid.Row="1"
-                Grid.Column="0"
-                HorizontalScrollBarVisibility="Auto"
-                VerticalScrollBarVisibility="Auto">
-                <RichTextBox
-                    x:Name="SortableList"
-                    Background="Transparent"
-                    BorderBrush="Transparent">
-                    <FlowDocument
-                        FontSize="16"
-                        Foreground="OrangeRed"
-                        PageWidth="Auto"
-                        TextAlignment="Center" />
-                </RichTextBox>
-            </ScrollViewer>-->
             <ListView
                 x:Name="NumbersToSortListView"
                 Grid.Row="1"
@@ -85,26 +70,11 @@
                 HorizontalAlignment="Center"
                 FontSize="18"
                 Text="Result" />
-            <!--<ScrollViewer
-                Grid.Row="1"
-                Grid.Column="1"
-                HorizontalScrollBarVisibility="Auto"
-                VerticalScrollBarVisibility="Auto">
-                <RichTextBox
-                    x:Name="ResultList"
-                    Background="Transparent"
-                    BorderBrush="Transparent">
-                    <FlowDocument
-                        FontSize="16"
-                        Foreground="OrangeRed"
-                        PageWidth="Auto"
-                        TextAlignment="Center" />
-                </RichTextBox>
-            </ScrollViewer>-->
             <ListView
                 x:Name="SortedResultListView"
                 Grid.Row="1"
                 Grid.Column="1"
+                Foreground="GreenYellow"
                 ItemsSource="{Binding SortedResult}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -113,15 +83,14 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-
-        </Grid>
-        <StackPanel Orientation="Horizontal">
             <Button
                 x:Name="GenerateButton"
                 Grid.Row="2"
-                Width="150"
+                Grid.Column="0"
+                Width="130"
                 Margin="10"
-                Padding="0"
+                Padding="10,5"
+                HorizontalAlignment="Center"
                 Click="GenerateButton_Click">
                 <TextBlock
                     Margin="0"
@@ -130,13 +99,18 @@
             </Button>
             <Button
                 x:Name="StartButton"
-                Width="150"
+                Grid.Row="2"
+                Grid.Column="1"
+                Width="130"
                 Margin="10"
+                Padding="10,5"
                 HorizontalAlignment="Center"
                 Click="StartButton_Click">
                 <TextBlock FontSize="20" Text="Start" />
             </Button>
-        </StackPanel>
+
+        </Grid>
+
         <TextBlock
             Margin="10"
             HorizontalAlignment="Center"
